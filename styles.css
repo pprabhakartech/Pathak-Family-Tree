@@ -1,0 +1,155 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    position: relative;
+}
+
+.toggle-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 1000; /* Ensure the button is above other content */
+}
+
+.toggle-button:hover {
+    background-color: #0056b3;
+}
+
+.tree, .tree ul {
+    list-style-type: none;
+    padding-left: 20px;
+    position: relative;
+}
+
+.tree li {
+    margin: 10px 0;
+    position: relative;
+    padding-left: 20px; /* Space for the vertical line */
+}
+
+.tree li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px; /* Vertical line thickness */
+    height: 100%; /* Full height of the node */
+    background-color: #ccc; /* Line color */
+}
+
+.tree li::after {
+    content: '';
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 0;
+    width: 20px; /* Horizontal line length */
+    height: 1px; /* Horizontal line thickness */
+    background-color: #ccc; /* Line color */
+}
+
+.tree li:last-child::before {
+    height: 50%; /* Adjust vertical line for the last child */
+}
+
+.tree .node {
+    display: inline-flex; /* Make the box width fit the content */
+    align-items: flex-start; /* Align items to the top */
+    cursor: pointer;
+    padding: 10px; /* Padding inside the box */
+    border: 1px solid #ddd; /* Border for the box */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #f9f9f9; /* Background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    width: fit-content; /* Adjust width to fit content */
+    min-width: 100px; /* Minimum width to ensure readability */
+}
+
+.tree .node-content {
+    display: flex;
+    flex-direction: column; /* Stack label, DOB, DOD vertically */
+}
+
+.tree .node:hover {
+    background-color: #e0f7fa; /* Hover background color */
+    border-color: #007bff; /* Hover border color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.tree .icon {
+    width: 24px; /* Default size */
+    height: 24px; /* Default size */
+    margin-right: 10px; /* Spacing between icon and label */
+    border-radius: 50%; /* Circular icon */
+    object-fit: cover; /* Ensure the image fits well */
+    transition: transform 0.3s ease; /* Smooth zoom transition */
+}
+
+.tree .icon:hover {
+    transform: scale(3); /* Zoom effect on hover */
+}
+
+
+/* Highlight the label when hovering the icon */
+.tree .icon:hover + .label {
+    /*color: #007bff; /* Change label color */
+    transform: translateX(5px); /* Optional: Add a slight movement */
+}
+
+.tree .label {
+    font-size: 14px;
+    font-weight: bold; /* Bold text for the label */
+    color: #333; /* Text color */
+    margin-bottom: 2px; /* Spacing between label and DOB/DOD */
+}
+
+.tree .dob,
+.tree .dod {
+    font-size: 11px;
+    color: #666;
+    line-height: 1.2; /* Spacing between DOB and DOD */
+}
+
+.tree .dob::before {
+    content: "DOB: ";
+    font-weight: bold;
+}
+
+.tree .dod::before {
+    content: "DOD: ";
+    font-weight: bold;
+}
+
+
+.tree ul {
+    display: none; /* Hide child lists by default */
+}
+
+.tree li.expanded > ul {
+    display: block; /* Show child lists when expanded */
+}
+
+
+/* for Father-Mother pair */
+.node-pair {
+    display: flex;
+    gap: 10px;
+}
+
+.node-pair .node {
+    flex: 1;
+    margin: 0;
+}
+
+.bonding-symbol {
+    font-size: 24px; /* Adjust size as needed */
+    margin: 0 0px; /* Add spacing around the symbol */
+    align-self: center; /* Center the symbol vertically */
+}
