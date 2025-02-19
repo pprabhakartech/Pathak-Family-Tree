@@ -1,8 +1,163 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    position: relative;
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
+
+body {
+  position: relative;
+  min-height: 100vh; /* Ensures full height and scrolling */
+  z-index: 0;
+}
+
+body::before {
+  content: "";
+  background-image: url('Image/Imagebackground.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.3;
+  position: fixed; /* Stays in place while scrolling */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+/* Header Styles */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(244, 244, 244, 0.9); /* Light background with slight opacity */
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 20px;
+}
+
+
+.decorative-heading {
+    font-family: 'Georgia', serif; /* Use a decorative font */
+    font-size: 2rem; /* Large font size */
+    color: #2c3e50; /* Dark color for contrast */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    margin: 0; /* Remove default margin */
+    padding: 5px 0; /* Add padding */
+    display: inline-block; /* Ensure the heading doesn't stretch full width */
+    border-bottom: 3px solid #e74c3c; /* Decorative underline */
+}
+
+/* Button Container */
+.button-container {
+    text-align: right;
+    margin: 20px;
+}
+
+/* About Us Button */
+.about-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-left: 10px;
+}
+
+.about-button:hover {
+    background-color: #2980b9;
+}
+
+/* Ensure About Us popup is hidden by default */
+#about-popup {
+    display: none;
+}
+
+/* Popup Styles */
+.popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    z-index: 1000; /* Ensure it appears above other content */
+}
+
+/* Specific styles for the About Us popup */
+#about-popup .popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    max-width: 50%; /* Cover 80% of the screen width */
+    width: 50%; /* Cover 80% of the screen width */
+    max-height: 50vh; /* Cover 80% of the screen height */
+    overflow-y: auto; /* Enable scrolling for content */
+}
+
+/* For About Us popup text Content */
+.section {
+     margin-bottom: 20px;
+        text-align: left;
+}
+.section h2 {
+    border-bottom: 2px solid #2c3e50;
+    padding-bottom: 5px;
+}
+.section p {
+    margin-left: 20px;
+}
+
+
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 90%;
+}
+
+.popup-image {
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.popup h2 {
+    font-size: 1.3rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.popup p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.close-button {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.close-button:hover {
+    background-color: #c0392b;
+}
+
 
 .toggle-button {
     position: fixed;
@@ -39,7 +194,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 1px; /* Vertical line thickness */
+    width: 2px; /* Vertical line thickness */
     height: 100%; /* Full height of the node */
     background-color: #ccc; /* Line color */
 }
@@ -50,7 +205,7 @@ body {
     top: 50%; /* Center vertically */
     left: 0;
     width: 20px; /* Horizontal line length */
-    height: 1px; /* Horizontal line thickness */
+    height: 2px; /* Horizontal line thickness */
     background-color: #ccc; /* Line color */
 }
 
@@ -152,4 +307,26 @@ body {
     font-size: 24px; /* Adjust size as needed */
     margin: 0 0px; /* Add spacing around the symbol */
     align-self: center; /* Center the symbol vertically */
+}
+/* Copyright Footer Styles */
+footer {
+    position: fixed; /* Fixed position to stay at the bottom */
+    bottom: 0; /* Align to the bottom of the viewport */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    text-align: center; /* Center-align the text */
+    padding: 0; /* Add some padding */
+    background-color: transparent; /* Fully transparent background */
+    color: #869099; /* Text color (change as needed) */
+    font-size: 1rem; /* Adjust font size */
+    font-weight: bold; /* Make the text bold */
+    z-index: 100; /* Ensure it stays above other content */
+    
+}
+footer p {
+    line-height: 1; /* Brings the text closer to the bottom edge */
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space out the content */
+    align-items: center; /* Vertically center the content */
+    padding: 0 10px; /* Add some padding for spacing */
 }
