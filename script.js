@@ -1,3 +1,28 @@
+// Show the popup when the page loads
+window.onload = function () {
+    document.getElementById('welcome-popup').style.display = 'flex';
+};
+
+// Close the popup when the close button is clicked
+document.getElementById('close-popup').addEventListener('click', function () {
+    document.getElementById('welcome-popup').style.display = 'none';
+});
+
+
+
+
+// Show the About Us popup when the About Us button is clicked
+document.getElementById('about-us').addEventListener('click', function () {
+    document.getElementById('about-popup').style.display = 'flex';
+});
+
+// Close the About Us popup
+document.getElementById('close-about-popup').addEventListener('click', function () {
+    document.getElementById('about-popup').style.display = 'none';
+});
+
+//for toggle button
+
 document.addEventListener('DOMContentLoaded', function() {
     const nodes = document.querySelectorAll('.tree .node');
     const toggleAllButton = document.getElementById('toggle-all');
