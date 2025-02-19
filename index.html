@@ -3,49 +3,246 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Collapsible Tree View with Photo Icons</title>
+    <title>Pathak Family Tree</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Expand/Collapse Button -->
-    <button id="toggle-all" class="toggle-button">Expand All</button>
+    <!-- Popup Window -->
+    <div id="welcome-popup" class="popup">
+        <div class="popup-content">
+            <!--
+            <img src="Image/welcome-image.png" alt="Welcome Image" class="popup-image" title="">
+            -->
+            <figure>
+                <img src="Image/welcome-image.png" alt="Welcome Image" class="popup-image" title="">
+                <figcaption>ॐ श्री गणेशाय नमः</figcaption>
+            </figure>
+            <h2>🙏पाठकवंशवृक्षे भवत्याः स्वागतम् अस्ति🙏</h2>
+            <p>पाठक परिवार – हमारी जड़ें, हमारा गौरव।</p>
+            <button id="close-popup" class="close-button">Close</button>
 
-    <!-- Tree Structure -->
-    <ul class="tree">
-        <li>
-            <div class="node">
-                <!--
-                <img src="Image\pp.png" alt="Nature Icon" class="icon">
-                <div class="node-content">
-                    <span class="label">Ram Naresh Pathak</span>
-                    <span class="dob">#</span>
-                    <span class="dod">#</span>
-                </div>
-                -->
-                                <div class="node-pair">
-                                    <div class="node">
-                                        <img src="Image\pp.png" alt="Flower Icon" class="icon">
-                                        <div class="node-content">
-                                            <span class="label">Ram Naresh Pathak</span>
-                                            <span class="dob">#</span>
-                                            <!--<span class="dod">#</span>-->
-                                        </div>
-                                    </div>
-                                    <span class="bonding-symbol">🔗</span> <!-- Unicode heart symbol -->
-                                    <div class="node">
-                                        <img src="Image\pp.png" alt="Flower Icon" class="icon">
-                                        <div class="node-content">
-                                            <span class="label">Jaharaa Pathak</span>
-                                            <span class="dob">#</span>
-                                            <!--<span class="dod">#</span>-->
-                                        </div>
-                                    </div>
-                                </div>
+        </div>
+    </div>
+
+    <!-- About Us Popup -->
+    <div id="about-popup" class="popup">
+        <div class="popup-content">
+            <!--
+            <h2>पाठकवंशवृक्षः परिचय</h2>
+            <div class="section">
+                <h2>ब्राह्मण शाखा</h2>
+                <p>शाकद्वीपीय/ साकलदीप ब्राह्मण / मग ब्राह्मण</p>
+                <h2>प्राचीन मूल स्थान</h2>
+                <p>शाकद्वीप / साकलद्वीप (मध्य एशिया -> वर्तमान अफगानिस्तान-ईरान क्षेत्र -> कैस्पियन सागर का दक्षिण-पूर्वी क्षेत्र)</p>
             </div>
+            -->
+             <h1>पाठकवंशवृक्षः परिचय</h1>
+
+    <div class="section">
+        <h2>ब्राह्मण शाखा</h2>
+        <p>शाकद्वीपीय/ साकलदीप ब्राह्मण / मग ब्राह्मण</p>
+    </div>
+
+    <div class="section">
+        <h2>प्राचीन मूल स्थान</h2>
+        <p>शाकद्वीप / साकलद्वीप (मध्य एशिया -> वर्तमान अफगानिस्तान-ईरान क्षेत्र -> कैस्पियन सागर का दक्षिण-पूर्वी क्षेत्र)</p>
+    </div>
+
+    <div class="section">
+        <h2>भारत में आगमन</h2>
+        <p>मौर्य काल के समय</p>
+    </div>
+
+    <div class="section">
+        <h2>आधुनिक स्थान</h2>
+        <p>मुख्यतः उत्तर प्रदेश, बिहार, राजस्थान, गुजरात और मध्य प्रदेश के विभिन्न क्षेत्रों में</p>
+    </div>
+
+    <div class="section">
+        <h2>उपासक</h2>
+        <p>सूर्य उपासक</p>
+    </div>
+
+    <div class="section">
+        <h2>पाठक गोत्र</h2>
+        <p>कश्यप ऋषि (मूल प्राचीन सप्तऋषियों में से एक)</p>
+    </div>
+
+    <div class="section">
+        <h2>पाठक कुल देवता/ देवी</h2>
+        <p>[यहाँ देवता/देवी का नाम जोड़ें]</p>
+    </div>
+
+            <button id="close-about-popup" class="close-button">Close</button>
+        </div>
+    </div>
+
+    <!-- Header Section -->
+    <header>
+        <h1 class="decorative-heading">पाठकवंशवृक्षः</h1>
+    </header>
+
+    <!-- Buttons Section -->
+    <div class="button-container">
+        <button id="toggle-all" class="toggle-button">Expand All</button>
+        <button id="about-us" class="about-button">About Us</button>
+    </div>
+
+<ul class="tree">
+    <!-- Great-Great-Great-Grandparents of Shree Ram and Shree Ram Wife -->
+    <li>
+        <div class="node">
+
+             
+                        <img src="Image/RootFamily.png" alt="Tree Icon" class="icon">
+                        <div class="node-content">
+                            <span class="label" title="Click here to know more.."><h2>कश्यपगोत्रस्य पाठकवंशवृक्षस्य परिचयः</h2></span>
+                            <!--
+                            <span class="dob">#</span>
+                            <span class="dod">#</span>
+                            -->
+                        </div>
+                        
+
+            <!--
+            <div class="node-pair">
+                <div class="node">
+                    <img src="Image/Male.png" alt="Great-Great-Great-Grandfather" class="icon">
+                    <div class="node-content">
+                        <span class="label">Great-Great-Great-Grandfather</span>
+                        <span class="dob">#</span>
+                    </div>
+                </div>
+                <span class="bonding-symbol">🔗</span> 
+                <div class="node">
+                    <img src="Image/Female.png" alt="Great-Great-Great-Grandmother" class="icon">
+                    <div class="node-content">
+                        <span class="label">Great-Great-Great-Grandmother</span>
+                        <span class="dob">#</span>
+                    </div>
+                </div>
+            </div>
+            -->
+        </div>
+        <!-- Children of Great-Great-Great-Grandparents -->
+        <ul>
+            <li>
+                <!-- Kalicharan Pathak and Kalicharan Wife -->
+                <div class="node">
+                    <div class="node-pair">
+                        <div class="node">
+                            <img src="Image/Male.png" alt="Kalicharan" class="icon">
+                            <div class="node-content">
+                                <span class="label">Kalicharan Pathak</span>
+                                <span class="dob">#</span>
+                            </div>
+                        </div>
+                        <span class="bonding-symbol">🔗</span> <!-- Unicode heart symbol -->
+                        <div class="node">
+                            <img src="Image/Female.png" alt="Kalicharan Wife" class="icon">
+                            <div class="node-content">
+                                <span class="label">Kalicharan Wife</span>
+                                <span class="dob">#</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+           <!-- Children of Kalicharan Pathak and Kalicharan Wife -->
+        <ul>
+            <li>
+                <!-- Bhairav Pathak and Bhairav Pathak Wife -->
+                <div class="node">
+                    <div class="node-pair">
+                        <div class="node">
+                            <img src="Image/Male.png" alt="Bhairav Pathak" class="icon">
+                            <div class="node-content">
+                                <span class="label">Bhairav Pathak</span>
+                                <span class="dob">#</span>
+                            </div>
+                        </div>
+                        <span class="bonding-symbol">🔗</span> <!-- Unicode heart symbol -->
+                        <div class="node">
+                            <img src="Image/Female.png" alt="Bhairav Pathak Wife" class="icon">
+                            <div class="node-content">
+                                <span class="label">Bhairav Pathak Wife</span>
+                                <span class="dob">#</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        <!-- Children of Bhairav Pathak and Bhairav Pathak Wife -->
+        <ul>
+            <li>
+                <!-- Shree Ram and Shree Ram Wife -->
+                <div class="node">
+                    <div class="node-pair">
+                        <div class="node">
+                            <img src="Image/Male.png" alt="Grandfather Icon" class="icon">
+                            <div class="node-content">
+                                <span class="label">Shree Ram Pathak</span>
+                                <span class="dob">#</span>
+                            </div>
+                        </div>
+                        <span class="bonding-symbol">🔗</span> <!-- Unicode heart symbol -->
+                        <div class="node">
+                            <img src="Image/Female.png" alt="Grandmother Icon" class="icon">
+                            <div class="node-content">
+                                <span class="label">Shree Ram Pathak Wife</span>
+                                <span class="dob">#</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Children of Shree Ram and Shree Ram Wife -->
+        <ul>
+        <li>
+            <!-- Ram Aadhar Pathak and Eshwar Devi -->
+            <div class="node">
+                <div class="node-pair">
+                    <div class="node">
+                        <img src="Image/Ram Aadhar.png" alt="Ram Aadhar Pathak" class="icon">
+                        <div class="node-content">
+                            <span class="label">Ram Aadhar Pathak</span>
+                            <span class="dob">#</span>
+                        </div>
+                    </div>
+                    <span class="bonding-symbol">🔗</span> <!-- Unicode heart symbol -->
+                    <div class="node">
+                        <img src="Image/Female.png" alt="Eshwar devi" class="icon">
+                        <div class="node-content">
+                            <span class="label">Eshwar devi</span>
+                            <span class="dob">#</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Ramnaresh Pathak and Jaharaa Pathak -->
+            <ul>               
+                <li>
+                    <div class="node">
+                        <div class="node-pair">
+                            <div class="node">
+                                <img src="Image/Ramnaresh.png" alt="Flower Icon" class="icon">
+                                <div class="node-content">
+                                    <span class="label">Ramnaresh Pathak</span>
+                                    <span class="dob">#</span>
+                                </div>
+                            </div>
+                            <span class="bonding-symbol">🔗</span> <!-- Unicode heart symbol -->
+                            <div class="node">
+                                <img src="Image/Jaharaa.png" alt="Flower Icon" class="icon">
+                                <div class="node-content">
+                                    <span class="label">Jaharaa Pathak</span>
+                                    <span class="dob">#</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            <!-- Children of Ramnaresh Pathak and Jaharaa Pathak -->
             <ul>
                 <li>
                     <div class="node">
-                        <img src="tree-icon.png" alt="Tree Icon" class="icon">
+                        <img src="Image\Nirmala.png" alt="Tree Icon" class="icon">
                         <div class="node-content">
                             <span class="label">Nirmala Pathak</span>
                             <span class="dob">#</span>
@@ -66,19 +263,19 @@
                         -->
                                 <div class="node-pair">
                                     <div class="node">
-                                        <img src="Image\pp.png" alt="Flower Icon" class="icon">
+                                        <img src="Image\Dharamchandra.png" alt="Flower Icon" class="icon">
                                         <div class="node-content">
-                                            <span class="label">Dharam Chandra Pathak</span>
-                                            <span class="dob">#</span>
+                                            <span class="label">Dharamchandra Pathak</span>
+                                            <span class="dob">1957</span>
                                             <!--<span class="dod">#</span>-->
                                         </div>
                                     </div>
                                     <span class="bonding-symbol">🔗</span> <!-- Unicode heart symbol -->
                                     <div class="node">
-                                        <img src="Image\pp.png" alt="Flower Icon" class="icon">
+                                        <img src="Image\Gyanmati.png" alt="Flower Icon" class="icon">
                                         <div class="node-content">
                                             <span class="label">Gyanmati Pathak</span>
-                                            <span class="dob">#</span>
+                                            <span class="dob">1962</span>
                                             <!--<span class="dod">#</span>-->
                                         </div>
                                     </div>
@@ -88,7 +285,7 @@
                     <ul>
                         <li>
                             <div class="node">
-                                <img src="oak-icon.png" alt="Oak Icon" class="icon">
+                                <img src="Image\Ajita.png" alt="Oak Icon" class="icon">
                                 <div class="node-content">
                                     <span class="label">Ajita Pathak</span>
                                     <span class="dob">#</span>
@@ -109,19 +306,19 @@
 
                                 <div class="node-pair">
                                     <div class="node">
-                                        <img src="Image\pp.png" alt="Flower Icon" class="icon">
+                                        <img src="Image\Sanjeev.png" alt="Flower Icon" class="icon">
                                         <div class="node-content">
                                             <span class="label">Sanjeev Pathak</span>
-                                            <span class="dob">#</span>
+                                            <span class="dob">11-10-1986 03:15 PM</span>
                                             <!--<span class="dod">#</span>-->
                                         </div>
                                     </div>
                                     <span class="bonding-symbol">🔗</span> <!-- Unicode heart symbol -->
                                     <div class="node">
-                                        <img src="Image\pp.png" alt="Flower Icon" class="icon">
+                                        <img src="Image\Lata.png" alt="Flower Icon" class="icon">
                                         <div class="node-content">
-                                            <span class="label">Sanjeev Wife</span>
-                                            <span class="dob">#</span>
+                                            <span class="label">Lata Pathak (Roli)</span>
+                                            <span class="dob">02-02-1991</span>
                                             <!--<span class="dod">#</span>-->
                                         </div>
                                     </div>
@@ -132,31 +329,31 @@
                                 <ul>
                                     <li>
                                         <div class="node">
-                                            <img src="oak-icon.png" alt="Oak Icon" class="icon">
+                                            <img src="Image\Disha.png" alt="Pine Icon" class="icon">
                                             <div class="node-content">
-                                                <span class="label">Shreyas Pathak</span>
-                                                <span class="dob">#</span>
+                                                <span class="label">Disha Pathak(Milki)</span>
+                                                <span class="dob">20-06-2015</span>
                                                 <!--<span class="dod">#</span>-->
                                             </div>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="node">
-                                            <img src="pine-icon.png" alt="Pine Icon" class="icon">
+                                            <img src="Image\Shreyas.png" alt="Oak Icon" class="icon">
                                             <div class="node-content">
-                                                <span class="label">Disha Pathak(Milki)</span>
-                                                <span class="dob">#</span>
+                                                <span class="label">Shreyas Pathak</span>
+                                                <span class="dob">30-05-2017 12:45 PM</span>
                                                 <!--<span class="dod">#</span>-->
                                             </div>
                                         </div>
                                     </li>
-                                    
+                                                                        
                                  </ul>
 
                         </li>
                         <li>
                             <div class="node">
-                                <img src="maple-icon.png" alt="Maple Icon" class="icon">
+                                <img src="Image\Jyoti.png" alt="Maple Icon" class="icon">
                                 <div class="node-content">
                                     <span class="label">Jyoti Pathak</span>
                                     <span class="dob">#</span>
@@ -170,16 +367,16 @@
                     <div class="node">
                         <div class="node-pair">
                             <div class="node">
-                                <img src="Image\pp.png" alt="Flower Icon" class="icon">
+                                <img src="Image\Harishchandra.png" alt="Flower Icon" class="icon">
                                 <div class="node-content">
-                                    <span class="label">Harish Chandra Pathak</span>
-                                    <span class="dob">#</span>
+                                    <span class="label">Harishchandra Pathak</span>
+                                    <span class="dob">20-08-1959</span>
                                     <!--<span class="dod">#</span>-->
                                 </div>
                             </div>
                             <span class="bonding-symbol">🔗</span> <!-- Unicode heart symbol -->
                             <div class="node">
-                                <img src="Image\pp.png" alt="Flower Icon" class="icon">
+                                <img src="Image\Shakuntala-1.png" alt="Flower Icon" class="icon">
                                 <div class="node-content">
                                     <span class="label">Shakuntala Pathak</span>
                                     <span class="dob">#</span>
@@ -193,7 +390,7 @@
                     <ul>
                         <li>
                             <div class="node">
-                                <img src="rose-icon.png" alt="Rose Icon" class="icon">
+                                <img src="Image\Kusum.png" alt="Rose Icon" class="icon">
                                 <div class="node-content">
                                     <span class="label">Kusum Pathak</span>
                                     <span class="dob">#</span>
@@ -213,7 +410,7 @@
                                 -->
                                 <div class="node-pair">
                                     <div class="node">
-                                        <img src="Image\pp.png" alt="Flower Icon" class="icon">
+                                        <img src="Image\Prabhakar.png" alt="Flower Icon" class="icon">
                                         <div class="node-content">
                                             <span class="label">Prabhakar Pathak</span>
                                             <span class="dob">13-11-1986</span>
@@ -222,10 +419,10 @@
                                     </div>
                                     <span class="bonding-symbol">🔗</span> <!-- Unicode heart symbol -->
                                     <div class="node">
-                                        <img src="Image\pp.png" alt="Flower Icon" class="icon">
+                                        <img src="Image\Garima.png" alt="Flower Icon" class="icon">
                                         <div class="node-content">
                                             <span class="label">Garima Pathak</span>
-                                            <span class="dob">#</span>
+                                            <span class="dob">06-08-1989</span>
                                             <!--<span class="dod">#</span>-->
                                         </div>
                                     </div>
@@ -235,30 +432,30 @@
                                 <ul>
                                     <li>
                                         <div class="node">
-                                            <img src="rose-icon.png" alt="Rose Icon" class="icon">
+                                            <img src="Image\Agrima.png" alt="Rose Icon" class="icon">
                                             <div class="node-content">
-                                                <span class="label">Prabhanshi Pathak</span>
-                                                <span class="dob">#</span>
+                                                <span class="label">Agrima Pathak (Prabhanshi)</span>
+                                                <span class="dob">13-08-2015 04:15 AM</span>
                                                 <!--<span class="dod">#</span>-->
                                             </div>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="node">
-                                            <img src="tulip-icon.png" alt="Tulip Icon" class="icon">
+                                            <img src="Image\Anantim.png" alt="Tulip Icon" class="icon">
                                             <div class="node-content">
                                                 <span class="label">Anantim Pathak(Prakhar)</span>
-                                                <span class="dob">#</span>
+                                                <span class="dob">08-06-2021</span>
                                                 <!--<span class="dod">#</span>-->
                                             </div>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="node">
-                                            <img src="tulip-icon.png" alt="Tulip Icon" class="icon">
+                                            <img src="Image\Anant.png" alt="Tulip Icon" class="icon">
                                             <div class="node-content">
                                                 <span class="label">Anant Pathak(Raja)</span>
-                                                <span class="dob">#</span>
+                                                <span class="dob">30-09-2022</span>
                                                 <!--<span class="dod">#</span>-->
                                             </div>
                                         </div>
@@ -282,19 +479,19 @@
 
                                 <div class="node-pair">
                                     <div class="node">
-                                        <img src="Image\pp.png" alt="Flower Icon" class="icon">
+                                        <img src="Image\Subhashchandra.png" alt="Flower Icon" class="icon">
                                         <div class="node-content">
-                                            <span class="label">Subhash Chandra Pathak</span>
-                                            <span class="dob">#</span>
+                                            <span class="label">Subhashchandra Pathak</span>
+                                            <span class="dob">1964</span>
                                             <!--<span class="dod">#</span>-->
                                         </div>
                                     </div>
                                     <span class="bonding-symbol">🔗</span> <!-- Unicode heart symbol -->
                                     <div class="node">
-                                        <img src="Image\pp.png" alt="Flower Icon" class="icon">
+                                        <img src="Image\Madhuri.png" alt="Flower Icon" class="icon">
                                         <div class="node-content">
                                             <span class="label">Madhuri Pathak</span>
-                                            <span class="dob">#</span>
+                                            <span class="dob">16-06-1966</span>
                                             <!--<span class="dod">#</span>-->
                                         </div>
                                     </div>
@@ -304,7 +501,7 @@
                     <ul>
                         <li>
                             <div class="node">
-                                <img src="rose-icon.png" alt="Rose Icon" class="icon">
+                                <img src="Image\Sapna.png" alt="Rose Icon" class="icon">
                                 <div class="node-content">
                                     <span class="label">Sapna Pathak</span>
                                     <span class="dob">#</span>
@@ -314,7 +511,7 @@
                         </li>
                         <li>
                             <div class="node">
-                                <img src="tulip-icon.png" alt="Tulip Icon" class="icon">
+                                <img src="Image\Akansha.png" alt="Tulip Icon" class="icon">
                                 <div class="node-content">
                                     <span class="label">Akansha Pathak(Manni)</span>
                                     <span class="dob">#</span>
@@ -335,19 +532,19 @@
 
                                 <div class="node-pair">
                                     <div class="node">
-                                        <img src="Image\pp.png" alt="Flower Icon" class="icon">
+                                        <img src="Image\Ashutosh.png" alt="Flower Icon" class="icon">
                                         <div class="node-content">
                                             <span class="label">Ashutosh Pathak(Anshu)</span>
-                                            <span class="dob">#</span>
+                                            <span class="dob">26-06-1992</span>
                                             <!--<span class="dod">#</span>-->
                                         </div>
                                     </div>
                                     <span class="bonding-symbol">🔗</span> <!-- Unicode heart symbol -->
                                     <div class="node">
-                                        <img src="Image\pp.png" alt="Flower Icon" class="icon">
+                                        <img src="Image\Roli.png" alt="Flower Icon" class="icon">
                                         <div class="node-content">
                                             <span class="label">Roli Pathak</span>
-                                            <span class="dob">#</span>
+                                            <span class="dob">10-03-1999</span>
                                             <!--<span class="dod">#</span>-->
                                         </div>
                                     </div>
@@ -358,10 +555,10 @@
                                 <ul>
                                     <li>
                                         <div class="node">
-                                            <img src="rose-icon.png" alt="Rose Icon" class="icon">
+                                            <img src="Image\Ansh.png" alt="Rose Icon" class="icon">
                                             <div class="node-content">
                                                 <span class="label">Ansh</span>
-                                                <span class="dob">#</span>
+                                                <span class="dob">08-08-2024 12:56 PM</span>
                                                 <!--<span class="dod">#</span>-->
                                             </div>
                                         </div>
@@ -385,19 +582,19 @@
 
                                 <div class="node-pair">
                                     <div class="node">
-                                        <img src="Image\pp.png" alt="Flower Icon" class="icon">
+                                        <img src="Image\Ramnath.png" alt="Flower Icon" class="icon">
                                         <div class="node-content">
-                                            <span class="label">Ram Nath Pathak</span>
-                                            <span class="dob">#</span>
+                                            <span class="label">Ramnath Pathak</span>
+                                            <span class="dob">10-12-1965</span>
                                             <!--<span class="dod">#</span>-->
                                         </div>
                                     </div>
                                     <span class="bonding-symbol">🔗</span> <!-- Unicode heart symbol -->
                                     <div class="node">
-                                        <img src="Image\pp.png" alt="Flower Icon" class="icon">
+                                        <img src="Image\Mithlesh.png" alt="Flower Icon" class="icon">
                                         <div class="node-content">
-                                            <span class="label">Mithesesh Pathak</span>
-                                            <span class="dob">#</span>
+                                            <span class="label">Mithlesh Pathak</span>
+                                            <span class="dob">01-01-1971</span>
                                             <!--<span class="dod">#</span>-->
                                         </div>
                                     </div>
@@ -417,19 +614,19 @@
                                 -->
                                 <div class="node-pair">
                                     <div class="node">
-                                        <img src="Image\pp.png" alt="Flower Icon" class="icon">
+                                        <img src="Image\Arvind.png" alt="Flower Icon" class="icon">
                                         <div class="node-content">
                                             <span class="label">Arvind Pathak</span>
-                                            <span class="dob">#</span>
+                                            <span class="dob">03-11-1991</span>
                                             <!--<span class="dod">#</span>-->
                                         </div>
                                     </div>
                                     <span class="bonding-symbol">🔗</span> <!-- Unicode heart symbol -->
                                     <div class="node">
-                                        <img src="Image\pp.png" alt="Flower Icon" class="icon">
+                                        <img src="Image\Romi.png" alt="Flower Icon" class="icon">
                                         <div class="node-content">
                                             <span class="label">Romi Pathak</span>
-                                            <span class="dob">#</span>
+                                            <span class="dob">15-07-1990</span>
                                             <!--<span class="dod">#</span>-->
                                         </div>
                                     </div>
@@ -440,20 +637,20 @@
                                 <ul>
                                     <li>
                                         <div class="node">
-                                            <img src="rose-icon.png" alt="Rose Icon" class="icon">
+                                            <img src="Image\Aradhaya.png" alt="Rose Icon" class="icon">
                                             <div class="node-content">
                                                 <span class="label">Aradhaya Pathak</span>
-                                                <span class="dob">#</span>
+                                                <span class="dob">29-01-2020</span>
                                                 <!--<span class="dod">#</span>-->
                                             </div>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="node">
-                                            <img src="rose-icon.png" alt="Rose Icon" class="icon">
+                                            <img src="Image\Aditi.png" alt="Rose Icon" class="icon">
                                             <div class="node-content">
                                                 <span class="label">Aditi Pathak</span>
-                                                <span class="dob">#</span>
+                                                <span class="dob">15-02-2021</span>
                                                 <!--<span class="dod">#</span>-->
                                             </div>
                                         </div>
@@ -463,7 +660,7 @@
                         </li>
                         <li>
                             <div class="node">
-                                <img src="tulip-icon.png" alt="Tulip Icon" class="icon">
+                                <img src="Image\Anjali.png" alt="Tulip Icon" class="icon">
                                 <div class="node-content">
                                     <span class="label">Anjali Pathak</span>
                                     <span class="dob">#</span>
@@ -473,7 +670,7 @@
                         </li>
                         <li>
                             <div class="node">
-                                <img src="tulip-icon.png" alt="Tulip Icon" class="icon">
+                                <img src="Image\Anjani.png" alt="Tulip Icon" class="icon">
                                 <div class="node-content">
                                     <span class="label">Anjani Pathak(Jugur)</span>
                                     <span class="dob">#</span>
@@ -483,7 +680,7 @@
                         </li>
                         <li>
                             <div class="node">
-                                <img src="tulip-icon.png" alt="Tulip Icon" class="icon">
+                                <img src="Image\Atul.png" alt="Tulip Icon" class="icon">
                                 <div class="node-content">
                                     <span class="label">Atul Pathak</span>
                                     <span class="dob">04-03-1998 10:10 PM</span>
@@ -493,10 +690,10 @@
                         </li>
                         <li>
                             <div class="node">
-                                <img src="tulip-icon.png" alt="Tulip Icon" class="icon">
+                                <img src="Image\Aman.png" alt="Tulip Icon" class="icon">
                                 <div class="node-content">
                                     <span class="label">Aman Pathak</span>
-                                    <span class="dob">#</span>
+                                    <span class="dob">25-09-2002</span>
                                     <!--<span class="dod">#</span>-->
                                 </div>
                             </div>
@@ -516,19 +713,19 @@
                         -->
                                 <div class="node-pair">
                                     <div class="node">
-                                        <img src="Image\pp.png" alt="Flower Icon" class="icon">
+                                        <img src="Image\Preamchandra.png" alt="Flower Icon" class="icon">
                                         <div class="node-content">
-                                            <span class="label">Pream Chandra Pathak</span>
-                                            <span class="dob">#</span>
+                                            <span class="label">Preamchandra Pathak</span>
+                                            <span class="dob">10-01-1973</span>
                                             <!--<span class="dod">#</span>-->
                                         </div>
                                     </div>
                                     <span class="bonding-symbol">🔗</span> <!-- Unicode heart symbol -->
                                     <div class="node">
-                                        <img src="Image\pp.png" alt="Flower Icon" class="icon">
+                                        <img src="Image\Shakuntala-2.png" alt="Flower Icon" class="icon">
                                         <div class="node-content">
                                             <span class="label">Shakuntala Pathak</span>
-                                            <span class="dob">#</span>
+                                            <span class="dob">1975</span>
                                             <!--<span class="dod">#</span>-->
                                         </div>
                                     </div>
@@ -538,30 +735,30 @@
                         <ul>
                             <li>
                                 <div class="node">
-                                    <img src="rose-icon.png" alt="Rose Icon" class="icon">
+                                    <img src="Image\Sudhanshu.png" alt="Rose Icon" class="icon">
                                     <div class="node-content">
                                         <span class="label">Sudhanshu Pathak(Sonu)</span>
-                                        <span class="dob">#</span>
+                                        <span class="dob">25-06-1994</span>
                                         <!--<span class="dod">#</span>-->
                                     </div>
                                 </div>
                             </li>
                             <li>
                                 <div class="node">
-                                    <img src="tulip-icon.png" alt="Tulip Icon" class="icon">
+                                    <img src="Image\Himanshu.png" alt="Tulip Icon" class="icon">
                                     <div class="node-content">
                                         <span class="label">Himanshu Pathak(Monu)</span>
-                                        <span class="dob">#</span>
+                                        <span class="dob">15-11-1999</span>
                                         <!--<span class="dod">#</span>-->
                                     </div>
                                 </div>
                             </li>
                             <li>
                                 <div class="node">
-                                    <img src="tulip-icon.png" alt="Tulip Icon" class="icon">
+                                    <img src="Image\Priyanka.png" alt="Tulip Icon" class="icon">
                                     <div class="node-content">
                                         <span class="label">Priyanka Pathak(Pinki)</span>
-                                        <span class="dob">#</span>
+                                        <span class="dob">25-04-2001</span>
                                         <!--<span class="dod">#</span>-->
                                     </div>
                                 </div>
@@ -569,8 +766,23 @@
                         </ul>
                 </li>
             </ul>
+            </li>
+            </ul>
         </li>
     </ul>
+    </li>
+</ul>
+   </li>
+</ul>
+    </li>
+</ul>
+    </li>
+</ul>
+ <!-- Copyright Footer -->
+    <footer>
+       
+        <p>Copyright &copy; 2024 by Pathak Family.|<span style="margin-left: auto;">Created by: Prabhakar Pathak</span></p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
