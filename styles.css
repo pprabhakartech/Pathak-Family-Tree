@@ -3,6 +3,7 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling on the body */
 }
 
 body {
@@ -29,17 +30,24 @@ body::before {
 }
 /* Header Styles */
 header {
-    width: 100vw; /* Use viewport width to ensure it stretches with horizontal scrolling */
-    box-sizing: border-box; /* Ensure padding is included in the width */
+    width: 100%; /* Span the full width of the viewport */
+    min-width: 100%; /* Ensure it spans the full width of the page */
+    box-sizing: border-box;
     text-align: center;
     padding: 20px;
-    background-color: rgba(244, 244, 244, 0.9); /* Light background with slight opacity */
+    background-color: rgba(244, 244, 244, 0.9);
     border-bottom: 2px solid #ccc;
-    margin-bottom: 20px;
     position: fixed; /* Fix the header at the top */
-    top: 0; /* Align to the top */
-    left: 0; /* Align to the left */
+    top: 0;
+    left: 0;
     z-index: 1000; /* Ensure it stays above other content */
+}
+/* Tree Wrapper */
+.tree-wrapper {
+    margin-top: 80px; /* Add margin to prevent overlap with the header */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    width: 100%; /* Span the full width */
+    padding-bottom: 20px; /* Add padding to prevent overlap with the footer */
 }
 
 /* Responsive Header for Mobile Screens */
