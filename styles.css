@@ -29,6 +29,8 @@ body::before {
 }
 /* Header Styles */
 header {
+    width: 100%; /* Ensure the header spans the full width */
+    box-sizing: border-box; /* Ensure padding is included in the width */
     text-align: center;
     padding: 20px;
     background-color: rgba(244, 244, 244, 0.9); /* Light background with slight opacity */
@@ -63,7 +65,8 @@ header {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
     margin: 0; /* Remove default margin */
     padding: 5px 0; /* Add padding */
-    display: inline-block; /* Ensure the heading doesn't stretch full width */
+    display: block; /* Ensure the heading doesn't stretch full width */
+    text-align: center; /* Center the text */
     border-bottom: 3px solid #e74c3c; /* Decorative underline */
 }
 
