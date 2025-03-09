@@ -27,7 +27,7 @@ body::before {
   z-index: -1;
   pointer-events: none;
 }
-/* Base styles for the header */
+/* Header Styles */
 header {
     width: 100%; /* Ensure the header spans the full width */
     box-sizing: border-box; /* Ensure padding is included in the width */
@@ -36,32 +36,61 @@ header {
     background-color: rgba(244, 244, 244, 0.9); /* Light background with slight opacity */
     border-bottom: 2px solid #ccc;
     margin-bottom: 20px;
+    position: relative; /* Ensure the header stays at the top */
+    z-index: 1000; /* Ensure it stays above other content */
 }
 
-/* Responsive adjustments for smaller screens */
+/* Responsive Header for Mobile Screens */
 @media (max-width: 768px) {
-    .decorative-heading {
-        font-size: 1.5rem; /* Slightly smaller font size for mobile */
-        display: block; /* Make the heading take full width on small screens */
+    header {
+        padding: 10px; /* Reduce padding for smaller screens */
     }
 
-    header {
-        padding: 15px; /* Reduce padding for smaller screens */
+    .decorative-heading {
+        font-size: 1.5rem; /* Reduce font size for smaller screens */
+        padding: 5px 0; /* Adjust padding */
+    }
+
+    .blink {
+        font-size: 18px; /* Reduce font size for smaller screens */
+        padding: 5px; /* Adjust padding */
+    }
+
+    .button-container {
+        margin: 10px; /* Reduce margin for smaller screens */
+    }
+
+    .about-button, .toggle-button {
+        padding: 8px 16px; /* Adjust button padding for smaller screens */
+        font-size: 0.9rem; /* Reduce font size for smaller screens */
     }
 }
 
-/* Further adjustments for very small screens */
+/* Responsive Header for Very Small Screens */
 @media (max-width: 480px) {
+    header {
+        padding: 5px; /* Further reduce padding for very small screens */
+    }
+
     .decorative-heading {
-        font-size: 1.25rem; /* Even smaller font size for very small screens */
+        font-size: 1.2rem; /* Further reduce font size for very small screens */
         padding: 3px 0; /* Adjust padding */
     }
 
-    header {
-        padding: 10px; /* Further reduce padding for very small screens */
+    .blink {
+        font-size: 16px; /* Further reduce font size for very small screens */
+        padding: 3px; /* Adjust padding */
+    }
+
+    .button-container {
+        margin: 5px; /* Further reduce margin for very small screens */
+    }
+
+    .about-button, .toggle-button {
+        padding: 6px 12px; /* Further adjust button padding for very small screens */
+        font-size: 0.8rem; /* Further reduce font size for very small screens */
     }
 }
-
 .blink {
     font-size: 24px;
     font-weight: bold;
