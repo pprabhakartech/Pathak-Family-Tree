@@ -3,7 +3,6 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* Prevent horizontal scrolling on the body */
 }
 
 body {
@@ -30,79 +29,14 @@ body::before {
 }
 /* Header Styles */
 header {
-    width: 100%; /* Span the full width of the viewport */
-    min-width: 100%; /* Ensure it spans the full width of the page */
-    box-sizing: border-box;
+    width: 100%; /* Ensure the header spans the full width */
+    box-sizing: border-box; /* Ensure padding is included in the width */
     text-align: center;
     padding: 20px;
-    background-color: rgba(244, 244, 244, 0.9);
+    background-color: rgba(244, 244, 244, 0.9); /* Light background with slight opacity */
     border-bottom: 2px solid #ccc;
-    position: fixed; /* Fix the header at the top */
-    top: 0;
-    left: 0;
-    z-index: 1000; /* Ensure it stays above other content */
+    margin-bottom: 20px;
 }
-/* Tree Wrapper */
-.tree-wrapper {
-    margin-top: 80px; /* Add margin to prevent overlap with the header */
-    overflow-x: auto; /* Enable horizontal scrolling */
-    width: 100%; /* Span the full width */
-    padding-bottom: 20px; /* Add padding to prevent overlap with the footer */
-}
-
-/* Responsive Header for Mobile Screens */
-@media (max-width: 768px) {
-    header {
-        padding: 10px; /* Reduce padding for smaller screens */
-    }
-
-    .decorative-heading {
-        font-size: 1.5rem; /* Reduce font size for smaller screens */
-        padding: 5px 0; /* Adjust padding */
-    }
-
-    .blink {
-        font-size: 18px; /* Reduce font size for smaller screens */
-        padding: 5px; /* Adjust padding */
-    }
-
-    .button-container {
-        margin: 10px; /* Reduce margin for smaller screens */
-    }
-
-    .about-button, .toggle-button {
-        padding: 8px 16px; /* Adjust button padding for smaller screens */
-        font-size: 0.9rem; /* Reduce font size for smaller screens */
-    }
-}
-
-/* Responsive Header for Very Small Screens */
-@media (max-width: 480px) {
-    header {
-        padding: 5px; /* Further reduce padding for very small screens */
-    }
-
-    .decorative-heading {
-        font-size: 1.2rem; /* Further reduce font size for very small screens */
-        padding: 3px 0; /* Adjust padding */
-    }
-
-    .blink {
-        font-size: 16px; /* Further reduce font size for very small screens */
-        padding: 3px; /* Adjust padding */
-    }
-
-    .button-container {
-        margin: 5px; /* Further reduce margin for very small screens */
-    }
-
-    .about-button, .toggle-button {
-        padding: 6px 12px; /* Further adjust button padding for very small screens */
-        font-size: 0.8rem; /* Further reduce font size for very small screens */
-    }
-}
-
-
 
 .blink {
     font-size: 24px;
@@ -124,7 +58,6 @@ header {
     50% { opacity: 0; transform: scale(1.1); }
   }
 */
-/* Base styles for the decorative heading */
 .decorative-heading {
     font-family: 'Georgia', serif; /* Use a decorative font */
     font-size: 2rem; /* Large font size */
@@ -133,10 +66,10 @@ header {
     margin: 0; /* Remove default margin */
     padding: 5px 0; /* Add padding */
     display: inline-block; /* Ensure the heading doesn't stretch full width */
+    /*display: block;*/ /* Make it take full width */
     text-align: center; /* Center the text */
     border-bottom: 3px solid #e74c3c; /* Decorative underline */
 }
-
 
 /* Button Container */
 .button-container {
