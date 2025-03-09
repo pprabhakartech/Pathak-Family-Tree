@@ -29,14 +29,16 @@ body::before {
 }
 /* Header Styles */
 header {
-    width: 100%; /* Ensure the header spans the full width */
+    width: 100vw; /* Use viewport width to ensure it stretches with horizontal scrolling */
     box-sizing: border-box; /* Ensure padding is included in the width */
     text-align: center;
     padding: 20px;
     background-color: rgba(244, 244, 244, 0.9); /* Light background with slight opacity */
     border-bottom: 2px solid #ccc;
     margin-bottom: 20px;
-    position: relative; /* Ensure the header stays at the top */
+    position: fixed; /* Fix the header at the top */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
     z-index: 1000; /* Ensure it stays above other content */
 }
 
@@ -91,6 +93,9 @@ header {
         font-size: 0.8rem; /* Further reduce font size for very small screens */
     }
 }
+
+
+
 .blink {
     font-size: 24px;
     font-weight: bold;
