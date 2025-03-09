@@ -27,13 +27,39 @@ body::before {
   z-index: -1;
   pointer-events: none;
 }
-/* Header Styles */
+/* Base styles for the header */
 header {
+    width: 100%; /* Ensure the header spans the full width */
+    box-sizing: border-box; /* Ensure padding is included in the width */
     text-align: center;
     padding: 20px;
     background-color: rgba(244, 244, 244, 0.9); /* Light background with slight opacity */
     border-bottom: 2px solid #ccc;
     margin-bottom: 20px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .decorative-heading {
+        font-size: 1.5rem; /* Slightly smaller font size for mobile */
+        display: block; /* Make the heading take full width on small screens */
+    }
+
+    header {
+        padding: 15px; /* Reduce padding for smaller screens */
+    }
+}
+
+/* Further adjustments for very small screens */
+@media (max-width: 480px) {
+    .decorative-heading {
+        font-size: 1.25rem; /* Even smaller font size for very small screens */
+        padding: 3px 0; /* Adjust padding */
+    }
+
+    header {
+        padding: 10px; /* Further reduce padding for very small screens */
+    }
 }
 
 .blink {
@@ -56,6 +82,7 @@ header {
     50% { opacity: 0; transform: scale(1.1); }
   }
 */
+/* Base styles for the decorative heading */
 .decorative-heading {
     font-family: 'Georgia', serif; /* Use a decorative font */
     font-size: 2rem; /* Large font size */
@@ -67,6 +94,7 @@ header {
     text-align: center; /* Center the text */
     border-bottom: 3px solid #e74c3c; /* Decorative underline */
 }
+
 
 /* Button Container */
 .button-container {
