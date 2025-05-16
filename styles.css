@@ -30,14 +30,14 @@ body::before {
 /* Header Styles */
 header {
     box-sizing: border-box; /* Ensure padding is included in the width */
-    padding: 20px;
+    padding: 15px;
     border-bottom: 2px solid #ccc;
     margin-bottom: 20px;
     position: fixed; /* Fixed position to stay at the bottom */
     top: 0; /* Align to the bottom of the viewport */
     left: 0; /* Align to the left */
     width: 100%; /* Full width */
-    text-align: center; /* Center-align the text */
+    text-align:center; /* Center-align the text */
     background-color:  rgba(244, 244, 244, 0.9); /* Light background with slight opacity */
     z-index: 100; /* Ensure it stays above other content */
 }
@@ -83,8 +83,12 @@ header {
 }
 .toggle-button {
     position: fixed;
+    /*
     top: 5px;
     right: 5px;
+    */
+    top: 85px;
+    right: 110px;
     padding: 10px 10px;
     background-color: #FFBF00;
     color: white;
@@ -102,7 +106,7 @@ header {
 /* About Us Button */
 .about-button {
     position: fixed;
-    top: 55px;
+    top: 85px;
     right: 5px;
     padding: 10px 15px;
     background-color: #FFBF00;
