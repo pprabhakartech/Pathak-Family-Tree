@@ -69,3 +69,12 @@ document.addEventListener('DOMContentLoaded', function() {
         toggleAllButton.textContent = isExpanded ? 'Collapse All' : 'Expand All'; // Update button text
     });
 });
+
+//Count total number of living person
+document.addEventListener("DOMContentLoaded", function () {
+        const livingNodes = document.querySelectorAll('.node.living');
+        const livingCountElement = document.getElementById('living-count');
+        if (livingCountElement) {
+            livingCountElement.textContent = livingNodes.length;
+        }
+    });
