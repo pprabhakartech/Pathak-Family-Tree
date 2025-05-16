@@ -78,3 +78,21 @@ document.addEventListener("DOMContentLoaded", function () {
             livingCountElement.textContent = livingNodes.length;
         }
     });
+//Count total number of living Male person
+document.addEventListener("DOMContentLoaded", function () {
+        // Corrected selector: Looks for .node > .node-content.Male
+        const maleNodes = document.querySelectorAll('.node > .node-content.Male');
+        const countElement = document.getElementById('living-count-Male');
+        if (countElement) {
+        countElement.textContent = maleNodes.length; // Should now show 1
+        } 
+    });
+//Count total number of living Female person
+document.addEventListener("DOMContentLoaded", function () {
+        // Corrected selector: Looks for .node > .node-content.Male
+        const femaleNodes = document.querySelectorAll('.node > .node-content.Female');
+        const countElement = document.getElementById('living-count-Female');
+        if (countElement) {
+        countElement.textContent = femaleNodes.length; // Should now show 1
+        } 
+    });
